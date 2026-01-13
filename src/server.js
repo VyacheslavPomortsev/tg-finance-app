@@ -1,3 +1,4 @@
+import pool from './db.js';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -18,6 +19,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
+
+pool.query('SELECT 1')
+  .then(() => console.log('PostgreSQL connected'))
+  .catch(err => console.error('DB error', err));
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
