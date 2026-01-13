@@ -1,3 +1,4 @@
+console.log('DATABASE_URL:', process.env.DATABASE_URL);
 import pool from './db.js';
 import express from 'express';
 import path from 'path';
