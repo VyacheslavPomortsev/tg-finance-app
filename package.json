@@ -1,0 +1,12 @@
+{
+  "name": "tg-finance-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  }
+}
+
